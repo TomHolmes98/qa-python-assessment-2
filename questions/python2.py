@@ -144,10 +144,15 @@ def five():
     import random
     from random import randint
     mylist = []
-    for i in range(0,5):
-        even = sum(randint(100, 200) % 2 == 0 for _ in range(100, 200))
-        mylist.append(even)
+    while len(mylist) < 5:
+        i = randint(100, 201)
+        if i % 2 == 0:
+            mylist.append(i)
     return mylist
+
+
+
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
