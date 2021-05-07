@@ -119,7 +119,6 @@ def three(a):
 def four(string1, string2):
     return ''.join(''.join(x) for x in zip(string1,string2))
 
-print(four("String","Fridge"))
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
     # <QUESTION 5>
@@ -138,7 +137,13 @@ print(four("String","Fridge"))
 
 
 def five():
-    return []
+    import random
+    from random import randint
+    mylist = []
+    for i in range(0,5):
+        even = sum(randint(100, 200) % 2 == 0 for _ in range(100, 200))
+        mylist.append(even)
+    return mylist
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -160,7 +165,15 @@ def five():
 
 
 def six(string):
-    return False
+	if string[-1].lower() == "y" and string[-2].lower() == "p":
+	    return True
+	else: 
+	    return False
+
+print(six("ilovepy"))
+
+
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
