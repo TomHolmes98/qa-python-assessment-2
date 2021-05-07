@@ -58,7 +58,11 @@ def one(string):
 
 
 def two(i):
-    if((i%1==0) & (i%i==0)):
+    if i == 2:
+        return True
+    elif i%2==0:
+        return False
+    elif ((i%1==0) & (i%i==0)):
         return True
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -169,8 +173,6 @@ def six(string):
 	    return True
 	else: 
 	    return False
-
-print(six("ilovepy"))
 
 
 
