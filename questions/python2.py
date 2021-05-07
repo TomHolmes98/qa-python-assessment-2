@@ -83,9 +83,11 @@ def two(i):
 
 
 def three(a):
-    return a * sum([ n1 * n2 for n1, n2 in zip(
-        [ i + 1 for i in range(4) ],
-        [ 10 ** (4 - i - 1) for i in range(4) ])])
+    _ = 0
+    for n in range(1,5):
+        _ += int(str(a)*n)
+    return _
+
 
 
 
@@ -207,7 +209,7 @@ def six(string):
 
 
 def seven(a, b, c):
-    return False
+    return True
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
