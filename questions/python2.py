@@ -31,7 +31,13 @@
 # How does a for loop iterate through a string?
 
 def one(string):
-    return ""
+    new_string = ""
+    for char in string:
+        new_string += char*3
+    return new_string
+
+
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -51,8 +57,9 @@ def one(string):
     # Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 
-def two(number):
-    return False
+def two(i):
+    if((i%1==0) & (i%i==0)):
+        return True
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -72,7 +79,13 @@ def two(number):
 
 
 def three(a):
-    return 1
+    return a * sum([ n1 * n2 for n1, n2 in zip(
+        [ i + 1 for i in range(4) ],
+        [ 10 ** (4 - i - 1) for i in range(4) ])])
+
+
+
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -104,8 +117,9 @@ def three(a):
 
 
 def four(string1, string2):
-    return ""
+    return ''.join(''.join(x) for x in zip(string1,string2))
 
+print(four("String","Fridge"))
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
     # <QUESTION 5>
